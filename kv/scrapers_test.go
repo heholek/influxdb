@@ -38,11 +38,11 @@ func initScraperTargetStoreService(s kv.SchemaStore, f influxdbtesting.TargetFie
 		}
 	}
 
-	for _, m := range f.UserResourceMappings {
-		if err := svc.CreateUserResourceMapping(ctx, m); err != nil {
-			t.Fatalf("failed to populate user resource mapping")
-		}
-	}
+	// for _, m := range f.UserResourceMappings {
+	// 	if err := svc.CreateUserResourceMapping(ctx, m); err != nil {
+	// 		t.Fatalf("failed to populate user resource mapping")
+	// 	}
+	// }
 
 	for _, o := range f.Organizations {
 		if err := svc.PutOrganization(ctx, o); err != nil {
